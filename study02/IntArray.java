@@ -17,7 +17,7 @@ public class IntArray {
 			scores[i] = scn.nextInt();
 		}
 		for (int i = 0 ; i < scores.length; i++) {
-			System.out.printf("%s점수 %d \n", scores[i]);
+			System.out.printf("%s점수 %d \n", scores[i],subjects[i]);
 		}
 		/*
 		 * int[] scores = { kor, eng, math, science, society };
