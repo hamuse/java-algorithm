@@ -19,18 +19,6 @@ public class OddSequence {
 		int end = scn.nextInt();
 
 		for (int i = start; i <= end; i++) {
-//			if (i == 9) {
-//				sequence += i + "=";
-//				serise += i;
-//
-//			} else if (i % 2 == 1) {
-//				sequence += i + "+";
-//				serise += i;
-//
-//			} else {
-//
-//		
-//			
 			if (i % 2 != 0) {
 				int end2 = end;
 				if (end % 2 == 0) {
