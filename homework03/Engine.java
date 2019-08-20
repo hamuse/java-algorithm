@@ -114,14 +114,26 @@ public class Engine {
 	                break;
 	            case 10:
 	                System.out.println("Join");
-	                String[] join = { "아이디: ", "비밀번호: ", "이름: ", "생년월일 예)1990-05-05: ", "성인여부(성인true , 미성년 false): ",
-	                        "키 입력(소수점 첫째자리까지): ", "몸무게 입력 (소수점 첫째자리까지): ", "혈액형: " };
-	                String[] joinInput = new String[join.length]; // 배열 갯수 join만큼 만들기 위해서
-	                System.out.println("회원가입");
-	                for (int i = 0; i < join.length; i++) {
-	                    System.out.printf("%s입력하세요.\n", join[i]);
-	                    joinInput[i] = scn.next();
-	                }
+	           	 String[] join = { "아이디: ", "비밀번호: ", "이름: ", "생년월일 예)1990-05-05: ", "성인여부(성인true , 미성년 false): ",
+	  	               "키 입력(소수점 첫째자리까지): ", "몸무게 입력 (소수점 첫째자리까지): ", "혈액형: " };
+	  	        String[] joinInput = new String[8]; //배열 갯수 join만큼 만들기 위해서 
+	  	        System.out.println(join[0]);
+	  	       joinInput[0] = scn.next();
+	  	       System.out.println(join[1]);
+	  	       joinInput[1] = scn.next();
+	  	       System.out.println(join[2]);
+	  	       joinInput[2] = scn.next();
+	  	       System.out.println(join[3]);
+	  	       joinInput[3] = scn.next();
+	  	       System.out.println(join[4]);
+	  	       joinInput[4] = scn.next();
+	  	       System.out.println(join[5]);
+	  	       joinInput[5] = scn.next();
+	  	       System.out.println(join[6]);
+	  	       joinInput[6] = scn.next();
+	  	       System.out.println(join[7]);
+	  	       joinInput[7] = scn.next();
+	  	                       
 	                 resurt = student.getJoin(join, joinInput);
 	                 System.out.println(resurt);
 	                break;
@@ -137,22 +149,17 @@ public class Engine {
 	                System.out.println(resurt);
 	                break;
 	            case 12:
-	                System.out.println("ScoreCalc");
-	                int count = 1; // 배열의 크기 1부터 시작
-	                int[] ans = new int[count];
-	                while (true) {
-	                    int[] array = new int[count]; // 임의로 배열수 저장
-	                    for (int i = 0; i < count - 1; i++) {
-	                        array[i] = ans[i];
-	                    }
-	                    System.out.println("더할수를 입력해주세요. 종료 -1");
-	                    int scnNum = scn.nextInt();
-	                    
-	                    resurt = student.getScoreCalc(scnNum, ans, array, count);
-	                    
-	                }
-	            //   System.out.println(resurt); 에러가 계속나서 위치 변경도 해보고 다 해봤는데 뭐가 문제인지 모르겠어요ㅠ_ㅠ
-	              //  break;
+	            	System.out.println("첫번째 수를 입력해주세요.");
+	    			int num1 =scn.nextInt();
+	    			System.out.println("두번째 수를 입력해주세요.");
+	    			int num2 = scn.nextInt();
+	    			System.out.println("세번째 수를 입력해주세요.");
+	    			int num3 = scn.nextInt();
+					resurt = student.getScoreCalc(num1, num2, num3);
+					
+					System.out.println(resurt);
+					
+	              break;
 	            }
 	        }
 	    }
