@@ -3,8 +3,8 @@ package study05;
 import java.util.Scanner;
 
 public class Engine {
-
-	public static void main(String[] args) {
+  //멤버 변수는 없다. 
+	public static void main(String[] args) { //클레스 메소드 
 		Scanner scanner = new Scanner(System.in);
 		Member member = null;
 		Service service = new Service();

@@ -1,12 +1,11 @@
-package study05;
+package homework04_member;
 
 public class Member { // 정보 정리해서 넘기는역할
 	private String id, name, birthday, pw, ssn, blood; // private 이 다른 클래스에서 접근불가
 	private double height, weight; // 은닉화 캡슐화 . 프로퍼티선언 한후 셋터 겟터 하면 은닉화 했다고함 .
-	private int kor, eng, math, salary;
-    
+    private int salary;
 	public String getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(String id) {
@@ -14,7 +13,7 @@ public class Member { // 정보 정리해서 넘기는역할
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -22,7 +21,7 @@ public class Member { // 정보 정리해서 넘기는역할
 	}
 
 	public String getBirthday() {
-		return birthday;
+		return this.birthday;
 	}
 
 	public void setBirthday(String birthday) {
@@ -30,7 +29,7 @@ public class Member { // 정보 정리해서 넘기는역할
 	}
 
 	public String getPw() {
-		return pw;
+		return this.pw;
 	}
 
 	public void setPw(String pw) {
@@ -38,7 +37,7 @@ public class Member { // 정보 정리해서 넘기는역할
 	}
 
 	public String getSsn() {
-		return ssn;
+		return this.ssn;
 	}
 
 	public void setSsn(String ssn) {
@@ -46,7 +45,7 @@ public class Member { // 정보 정리해서 넘기는역할
 	}
 
 	public String getBlood() {
-		return blood;
+		return this.blood;
 	}
 
 	public void setBlood(String blood) {
@@ -54,7 +53,7 @@ public class Member { // 정보 정리해서 넘기는역할
 	}
 
 	public double getHeight() {
-		return height;
+		return this.height;
 	}
 
 	public void setHeight(double height) {
@@ -62,41 +61,15 @@ public class Member { // 정보 정리해서 넘기는역할
 	}
 
 	public double getWeight() {
-		return weight;
+		return this.weight;
 	}
 
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-
-	public void setKor(int kor) {
-		this.kor = kor;
-	}
-
-	public int getKor() {
-		return this.kor;
-	}
-
-	public void setEng(int eng) {
-		this.eng = eng;
-	}
-
-	public int getEng() {
-		return this.eng;
-	}
-
-	public void setMath(int math) {
-		this.math = math;
-	}
-
-	public int getMath() {
-		return this.math;
-	}
-
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-
 	public int getSalary() {
 		return this.salary;
 	}

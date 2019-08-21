@@ -1,4 +1,4 @@
-package study05;
+package study06;
 
 public class Service { // 메소드 만드는것 // 필드 땅은 있는데 땅 의미의 필더가 아니라 멤버변수의 필드가 있는데 여기엔 맴버 변수가 없다. 
 	public String getBmi(Member member) {

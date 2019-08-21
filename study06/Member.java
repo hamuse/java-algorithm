@@ -1,4 +1,4 @@
-package study05;
+package study06;
 
 public class Member { // 정보 정리해서 넘기는역할
 	private String id, name, birthday, pw, ssn, blood; // private 이 다른 클래스에서 접근불가
