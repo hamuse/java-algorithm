@@ -2,78 +2,48 @@ package study06;
 
 import javax.swing.JOptionPane;
 
+import homework04_member.Member;
+import homework04_member.MemberService;
+
 public class Engine {
   //멤버 변수는 없다. 
 	public static void main(String[] args) { //클레스 메소드 
-		Member member = null;
-		Service service = new Service();
+		Member mb = null;
+		MemberService mbS = new MemberService();
+
 		while (true) {
-			System.out.println("0.종료 1.Join 2.마이페이지 3.아이디찾기 4.BMI 5.ReportCard 6.Tax");
-		//	int num = scanner.nextInt();
-			switch (num) {
-			case 0:
-				System.out.println("종료");
+			switch (JOptionPane.showInputDialog("0.종료 1.회원가입 2.마이페이지 3. BMI 4.tax")) {
+
+			case "0":
+				JOptionPane.showMessageDialog(null, "종료");
 				return;
-			case 1:
-				System.out.println("1.Join");
-			//	member = new Member();
-			//	System.out.println("아이디: ");
-			//	member.setId(scanner.next());
-			//	System.out.println("비밀번호: ");
-			//	member.setPw(scanner.next());
-			//	System.out.println("이름: ");
-			//	member.setName(scanner.next());
-			//	System.out.println("생일: ");
-			//	member.setBirthday(scanner.next());
-			//	System.out.println("성인여부: (성인true,미성년false)");
-				//member.setSsn(scanner.next());
-		//		System.out.println("혈액형: ");
-				//member.setBlood(scanner.next());
-		//		System.out.println("키: ");
-			//	member.setHeight(scanner.nextDouble());
-		//		System.out.println("몸무게: ");
-		//		member.setWeight(scanner.nextDouble());
+			case "1":
+				mb = new Member();
+				mb.setId(JOptionPane.showInputDialog("ID입력"));
+				mb.setPw(JOptionPane.showInputDialog("비번입력"));
+				mb.setName(JOptionPane.showInputDialog("이름입력"));
+				String height = JOptionPane.showInputDialog("키 입력");
+				mb.setHeight(Double.parseDouble(height));
+				String weight = JOptionPane.showInputDialog("몸무게 입력");
+				mb.setWeight(Double.parseDouble(weight));
+				String salary = JOptionPane.showInputDialog("연봉입력");
+				mb.setSalary(Integer.parseInt(salary));
+
 				break;
-			case 2:
-				System.out.println("마이페이지");
-				JOptionPane.showMessageDialog(null, member.toString());
+			case "2":
+				JOptionPane.showMessageDialog(null, "2.My페이지\n" + mb.toString());
 				break;
-			case 3:
-			//	System.out.println("아이디 찾기");
-				//String searchName = scanner.next();
-			//	String searchId = scanner.next();
-			//	if (searchName.equals("a") && searchId.equals("a")) {
-			//		System.out.printf("찾는 아이디: %s \n" + "찾는 비밀번호: %s \n ", member.getId(), member.getPw());
-			//	}
-			//	if (searchName.equals("a")) {
-				//	System.out.printf("찾는아이디 : %s", member.getId());
-			//	} else {
-			//		System.out.println("찾는아이디가 없습니다.");
-			//	}
+			case "3":
+				String result = mbS.getBMI(mb);
+				JOptionPane.showMessageDialog(null, result);
 				break;
-			case 4:
-				System.out.println("BMI");
-				String result = service.getBmi(member);
-				System.out.println(result);
+
+			case "4":
+				result = mbS.getTax(mb);
+				JOptionPane.showMessageDialog(null, result);
+
 				break;
-			case 5:
-				//System.out.println("ReportCard");
-				//System.out.println("국어점수");
-			//	member.setKor(scanner.nextInt());
-			//	System.out.println("영어점수");
-			//	member.setEng(scanner.nextInt());
-				//System.out.println("수학점수");
-			//	member.setMath(scanner.nextInt());
-			//	result = service.getReportCard(member);
-			//	System.out.println(result);
-				break;
-			case 6:
-				//System.out.println("Tax");
-				//System.out.println("연봉을 입력하세요");
-			//	member.setSalary(scanner.nextInt());
-			//	result = service.getTax(member);
-			//	System.out.println(result);
-				break;
+
 			}
 		}
 	}
